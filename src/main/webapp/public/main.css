@@ -1,0 +1,27 @@
+:root {
+	--main-background: #def;
+}
+body {
+	min-height: 100vh;
+}
+h1,h2,h3 {
+	font-weight: 200;
+}
+header {
+
+}
+main {
+	min-height: calc(100vh - 24.8rem);
+}
+footer {
+	height: 20rem;
+	background: var(--main-background);
+}
+nav {
+	background: var(--main-background);
+	height: 2rem;
+	padding-top: 0.25rem;
+}
+.form-control {
+	margin-bottom: 0.5rem;
+}

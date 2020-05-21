@@ -1,0 +1,37 @@
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence">
+	
+	<persistence-unit name="main">
+		<provider>
+			org.hibernate.jpa.HibernatePersistenceProvider
+		</provider>
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://localhost/talent?useUnicode=true&amp;characterEncoding=UTF-8" />
+			<property name="javax.persistence.jdbc.user"
+				value="james" />
+			<property name="javax.persistence.jdbc.password"
+				value="bond" />
+			<property name="javax.persistence.jdbc.driver"
+				value="com.mysql.cj.jdbc.Driver" />
+			<property name="javax.persistence.schema-generation.database.action"
+				value="create" />
+			<property name="hibernate.jdbc.time_zone" value="UTC" />
+			<property name="hibernate.jdbc.pool_size" value="100" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="demo" transaction-type="RESOURCE_LOCAL">
+		<properties>
+			<property name="javax.persistence.jdbc.url" 
+				value="jdbc:derby:talent;create=true;user=james;password=bond;"/>
+			<property name="javax.persistence.jdbc.driver" 
+				value="org.apache.derby.jdbc.ClientDriver"/>
+			<property name="javax.persistence.jdbc.user"
+				value="james" />
+			<property name="javax.persistence.jdbc.password"
+				value="bond" />
+		</properties>
+	</persistence-unit>
+
+</persistence>

@@ -1,0 +1,41 @@
+<#ftl encoding="utf-8">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link href="/public/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="/public/main.css" rel="stylesheet" />
+	<link rel="icon" href="/public/shop.png" />
+
+	<meta property="og:title" content="DayOne" />
+	<meta property="og:type"  content="website" />
+	<meta property="og:url"   content="https://dayoneteam.com" />
+	<meta property="og:image"            content="https://dayoneteam.com/public/dayone.png" />
+	<meta property="og:image:secure_url" content="https://dayoneteam.com/public/dayone.png" />
+	<meta property="og:image:type"       content="image/png" />
+	<meta property="og:image:width"      content="1000" />
+	<meta property="og:image:height"     content="1000" />
+	<meta property="og:description"      content="The most flexible eCommerce platform." />
+</head>
+<body>
+
+<header>
+	<div class="container">
+		<h3>Demo</h3>
+	</div>
+	<nav>
+		<div class="container">
+			<a href="/">Home</a> / 
+			<#if user??>
+			<a href="/profile">Profile</a> / 
+			<a href="/password">Change Password</a> / 
+			<a href="/logout">Log Out</a>
+			<#else>
+			<a href="/login">Log In</a> / 
+			<a href="/register">Register</a>
+			</#if>
+		</div>
+	</nav>
+</header>
